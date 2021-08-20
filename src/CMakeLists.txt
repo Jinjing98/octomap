@@ -1,0 +1,50 @@
+# 增加PCL库的依赖
+FIND_PACKAGE( PCL REQUIRED COMPONENTS common io )
+
+# 添加头文件和库文件
+ADD_DEFINITIONS( ${PCL_DEFINITIONS} )
+INCLUDE_DIRECTORIES( ${PCL_INCLUDE_DIRS}  )
+LINK_LIBRARIES( ${PCL_LIBRARY_DIRS} )
+
+# octomap
+FIND_PACKAGE( octomap REQUIRED )
+INCLUDE_DIRECTORIES( ${OCTOMAP_INCLUDE_DIRS} )
+
+ADD_EXECUTABLE( pcd2octomap pcd2octomap.cpp )
+TARGET_LINK_LIBRARIES( pcd2octomap
+    ${PCL_LIBRARIES}
+    ${OCTOMAP_LIBRARIES})
+
+
+ADD_EXECUTABLE( pcd2octomap_zed_lidar pcd2octomap_zed_lidar.cpp )
+TARGET_LINK_LIBRARIES( pcd2octomap_zed_lidar
+    ${PCL_LIBRARIES}
+    ${OCTOMAP_LIBRARIES})
+
+ADD_EXECUTABLE( pcd2colorOctomap pcd2colorOctomap.cpp )
+TARGET_LINK_LIBRARIES( pcd2colorOctomap
+    ${PCL_LIBRARIES}
+    ${OCTOMAP_LIBRARIES})
+
+FIND_PACKAGE(OpenCV 3.2.0 REQUIRED)
+
+ADD_EXECUTABLE( joinmap joinMap.cpp )
+TARGET_LINK_LIBRARIES( joinmap
+    ${OCTOMAP_LIBRARIES}
+    ${OpenCV_LIBS})
+
+
+ADD_EXECUTABLE( test test.cpp )
+TARGET_LINK_LIBRARIES( test
+    ${OCTOMAP_LIBRARIES}
+    ${OpenCV_LIBS})
+
+
+
+ADD_EXECUTABLE( map_pcd_left_img map_pcd_left_img.cpp )
+TARGET_LINK_LIBRARIES( map_pcd_left_img
+    ${OCTOMAP_LIBRARIES}
+    ${PCL_LIBRARIES}
+    ${OCTOMAP_LIBRARIES}
+    ${OpenCV_LIBS})
+

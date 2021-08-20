@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jinjing/octomap/octomap_tutor_gx/src/test.cpp
+opencv2/opencv.hpp
+/home/jinjing/octomap/octomap_tutor_gx/src/opencv2/opencv.hpp
+

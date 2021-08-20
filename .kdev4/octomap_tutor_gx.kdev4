@@ -1,0 +1,38 @@
+[CMake]
+Build Directory Count=1
+Current Build Directory Index-Host System=0
+
+[CMake][CMake Build Directory 0]
+Build Directory Path=/home/jinjing/octomap/octomap_tutor_gx/build
+Build Type=
+CMake Binary=/usr/bin/cmake
+CMake Executable=/usr/bin/cmake
+Environment Profile=
+Extra Arguments=
+Install Directory=/usr/local
+Runtime=Host System
+
+[Launch]
+Launch Configurations=Launch Configuration 0
+
+[Launch][Launch Configuration 0]
+Configured Launch Modes=execute
+Configured Launchers=nativeAppLauncher
+Name=fuse_rs_img
+Type=Native Application
+
+[Launch][Launch Configuration 0][Data]
+Arguments=/home/jinjing/octomap/octomap_tutor_gx/NEW_DATA/zed.jpeg  /home/jinjing/octomap/octomap_tutor_gx/NEW_DATA/rslidar.pcd
+Configured from ProjectItem=octomap_tutor_gx,src,fuse_rs_img
+Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x00)
+Dependency Action=Nothing
+EnvironmentGroup=
+Executable=file:///home/jinjing/octomap/octomap_tutor_gx
+External Terminal=konsole --noclose --workdir %workdir -e %exe
+Project Target=octomap_tutor_gx,src,fuse_rs_img
+Use External Terminal=false
+Working Directory=file:///home/jinjing/octomap/octomap_tutor_gx/bin/
+isExecutable=false
+
+[Project]
+VersionControlSupport=kdevgit
